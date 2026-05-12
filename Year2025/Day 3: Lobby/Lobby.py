@@ -20,47 +20,7 @@ def build_number(arr):
     print('result', result)
 
     return int(result)
-'''
-def build_number2(arr): 
-    # Pair each value with its original index
-    indexed = list(enumerate(arr))
-    # Sort by the value (second item in tuple)
-    sorted_arr = sorted(indexed, key=lambda x: x[1],reverse=True)
-    #print(sorted_arr)
-    # Store only the biggest 12 numbers
-    top_12 = []
-    for original_index, value in sorted_arr[:12]:
-        top_12.append((original_index, value))
-    top_12_by_index = sorted(top_12, key=lambda x: x[0])
-    #print (top_12_by_index)
-    # Keep only the values, ordered by original index
-    #result = [value for original_index, value in sorted(top_12, key=lambda x: x[0])]
-    result = int("".join(str(value) for original_index, value in sorted(top_12, key=lambda x: x[0])))
-    print(result)
-    return result
 
-def build_number2(arr):
-
-    # Pair each value with its original index
-    indexed = list(enumerate(arr))
-
-    # Sort descending by value
-    sorted_arr = sorted(indexed, key=lambda x: x[1], reverse=True)
-
-    # Take the 12 biggest digits
-    top_12 = sorted_arr[:12]
-
-    # Restore original order
-    top_12_by_index = sorted(top_12, key=lambda x: x[0])
-
-    # Build final number
-    result = int(
-        "".join(str(value) for _, value in top_12_by_index)
-    )
-
-    print(result)
-
-    return result'''
 
 def build_number2(arr, k=12):
     stack = []
