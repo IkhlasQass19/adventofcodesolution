@@ -27,7 +27,7 @@ def get_password(arr, IntialPos):
         countZero += count_multiples(start, end)
     return countZero
 
-with open("/Users/qassimiikhlas/Documents/Improvment/Problem solving/data.txt", "r") as file:
+with open("data.txt", "r") as file:
     for line in file:
         line = line.strip()  # remove spaces/newlines
         if line:  # skip empty lines

@@ -60,7 +60,7 @@ def get_max_joltage2(array):
 
 result = []
 
-with open("/Users/qassimiikhlas/Documents/Improvment/Problem solving/Day 3: Lobby/data.txt", "r") as file:
+with open("data.txt", "r") as file:
     for line in file:
         line = line.strip()
 
